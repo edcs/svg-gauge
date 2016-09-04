@@ -30,7 +30,7 @@ export default () => (
         />
         <g
             id="dial"
-            transform="rotate(-45, 300, 300)"
+            transform="rotate(0, 304.5, 312.5)"
         >
             <circle
                 style={style.dialCenter}
