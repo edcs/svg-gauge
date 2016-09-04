@@ -21,7 +21,23 @@ const style = {
     },
 };
 
-export default () => (
+/**
+ * Creates an SVG transform for for the gauges needle using the supplied values. 90 degrees is subtracted from the
+ * calculated angle as the 'resting' position of the needle is at 12 o'clock.
+ *
+ * @param {Number} value
+ * @param {Number} min
+ * @param {Number} max
+ * @return {string}
+ */
+const createTransform = (value, min, max) => {
+    const percentage = (value - min) / (max - min);
+    const angle = (percentage * 180) - 90;
+
+    return `rotate(${angle}, 304.5, 312.5)`;
+};
+
+const Gauge = ({ value, min, max }) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 610 335">
         <path
             style={style.arc}
@@ -30,7 +46,7 @@ export default () => (
         />
         <g
             id="dial"
-            transform="rotate(0, 304.5, 312.5)"
+            transform={createTransform(value, min, max)}
         >
             <circle
                 style={style.dialCenter}
@@ -49,3 +65,11 @@ export default () => (
         </g>
     </svg>
 );
+
+Gauge.propTypes = {
+    value: React.PropTypes.number,
+    min: React.PropTypes.number,
+    max: React.PropTypes.number,
+};
+
+export default Gauge;

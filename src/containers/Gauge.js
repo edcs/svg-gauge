@@ -1,0 +1,15 @@
+import { connect } from 'react-redux';
+
+import Gauge from '../components/Gauge';
+
+const mapStateToProps = (state) => ({
+    value: state.gauge.value,
+    min: state.gauge.min,
+    max: state.gauge.max,
+});
+
+const mapDispatchToProps = () => ({
+    //
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Gauge);

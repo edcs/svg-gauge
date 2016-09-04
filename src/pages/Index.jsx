@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Gauge from '../components/Gauge';
+import Gauge from '../containers/Gauge';
 
 const style = {
     container: {
