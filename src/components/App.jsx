@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Index from '../pages/Index';
-import { fetchGauge } from '../state/actions';
+import fetchGauge from '../state/actions';
 
 class App extends React.Component {
     /**
