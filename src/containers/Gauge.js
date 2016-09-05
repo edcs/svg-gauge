@@ -6,6 +6,7 @@ const mapStateToProps = (state) => ({
     value: state.gauge.value,
     min: state.gauge.min,
     max: state.gauge.max,
+    unit: state.gauge.unit || '',
 });
 
 const mapDispatchToProps = () => ({
