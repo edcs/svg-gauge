@@ -24,6 +24,7 @@
     "babel-preset-stage-1": "^6.13.0",
     "babel-preset-stage-2": "^6.13.0",
     "clean-webpack-plugin": "^0.1.10",
+    "coveralls": "^2.11.12",
     "enzyme": "^2.4.1",
     "eslint": "^3.2.2",
     "eslint-config-airbnb": "^10.0.0",
@@ -41,7 +42,8 @@
     "build": "webpack -p --progress --config ./webpack.config.production.js",
     "deploy": "webpack -p --progress --config ./webpack.config.production.js; git subtree push --prefix=\"build\" origin gh-pages",
     "dev": "webpack-dev-server -d --progress --colors --hot --history-api-fallback --content-base build --config ./webpack.config.js",
-    "test": "node_modules/.bin/jest"
+    "test": "node_modules/.bin/jest --coverage",
+    "coverage": "node --harmony_proxies node_modules/.bin/jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "repository": {
     "type": "git",
