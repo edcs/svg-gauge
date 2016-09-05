@@ -39,6 +39,7 @@
   },
   "scripts": {
     "build": "webpack -p --progress --config ./webpack.config.production.js",
+    "deploy": "webpack -p --progress --config ./webpack.config.production.js; git subtree push --prefix=\"build\" origin gh-pages",
     "dev": "webpack-dev-server -d --progress --colors --hot --history-api-fallback --content-base build --config ./webpack.config.js",
     "test": "node_modules/.bin/jest"
   },
