@@ -54,5 +54,7 @@ The following things in this project are incomplete:
    this could be updated so that data is automatically refreshed every few seconds/minutes.
  * *Data via Websockets* Currently the data is loaded via HTTP, a websocket server could be used to provide live 
    data updating.
+ * *Edge Cases With Data* When certain values are sent, the needle can go off the dial, more extensive testing is
+   required to prevent this from happening.
  * *More extensive testing* This project uses Redux Sagas which aren't fully tested yet, tests should be written to
    make sure that this part of the project works as expected.
