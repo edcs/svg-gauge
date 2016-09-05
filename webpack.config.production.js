@@ -1,19 +1,12 @@
 var path = require('path'),
     webpack = require('webpack'),
+    CleanWebpackPlugin = require('clean-webpack-plugin'),
     HtmlWebpackPlugin = require('html-webpack-plugin');
-
-var globals = {
-    React: 'react',
-    ReactDom: 'react-dom'
-};
 
 var config = {
     target: 'web',
     devTool: 'cheap-module-source-map',
-    entry: {
-        app: path.resolve(__dirname, 'src/index.jsx'),
-        libs: Object.keys(globals).map(function(k){ return globals[k]; })
-    },
+    entry: path.resolve(__dirname, 'src/index.jsx'),
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: '/js/bundle.[hash].js',
@@ -32,6 +25,10 @@ var config = {
         extensions: ['', '.js', '.jsx'],
     },
     plugins: [
+        new CleanWebpackPlugin(['js'], {
+            root: path.resolve(__dirname, 'build'),
+            verbose: false
+        }),
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.DefinePlugin({
