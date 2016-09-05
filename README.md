@@ -1,6 +1,6 @@
 # SVG Gauge
 
-[![Codeship Status for edcs/svg-gauge](https://codeship.com/projects/811bdfd0-5565-0134-8fbc-4e423e130982/status?branch=master)](https://codeship.com/projects/172056)
+[![Codeship Status for edcs/svg-gauge](https://codeship.com/projects/811bdfd0-5565-0134-8fbc-4e423e130982/status?branch=master)](https://codeship.com/projects/172056) [![Coverage Status](https://coveralls.io/repos/github/edcs/svg-gauge/badge.svg?branch=master)](https://coveralls.io/github/edcs/svg-gauge?branch=master)
 
 A simple gauge built using React and SVG. A demo of this project is available here:
  
