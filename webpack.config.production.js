@@ -9,8 +9,8 @@ var config = {
     entry: path.resolve(__dirname, 'src/index.jsx'),
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: '/js/bundle.[hash].js',
-        chunkFilename: '/js/bundle.[chunkhash].js'
+        filename: 'js/bundle.[hash].js',
+        chunkFilename: 'js/bundle.[chunkhash].js'
     },
     module: {
         loaders: [
