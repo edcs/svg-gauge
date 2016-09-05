@@ -4,9 +4,6 @@ import createTransform from '../helpers/transform';
 import parseNumber from '../helpers/unit';
 
 const style = {
-    wrapper: {
-        width: 500,
-    },
     svg: {
         marginRight: 25,
         marginLeft: 25,
@@ -54,7 +51,7 @@ const style = {
 };
 
 const Gauge = ({ value, min, max, unit }) => (
-    <div style={style.wrapper}>
+    <div>
         <div style={style.textContainer}>
             <div style={{ ...style.text, ...style.upperText }}>
                 {parseNumber(value, unit)}
