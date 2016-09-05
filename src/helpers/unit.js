@@ -8,6 +8,6 @@ import currency from 'currency-symbol.js';
  * @param {String} unit
  * @return {*}
  */
-export default (value, unit) => (
+export default (value, unit = '') => (
     currency.symbolize(unit) + value
 );

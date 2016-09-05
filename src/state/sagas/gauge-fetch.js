@@ -6,8 +6,8 @@ import { FETCH_GAUGE, FETCHED_GAUGE } from '../action-types';
 
 const fetchGauge = function* () {
     try {
-        const response = yield gauge.data().then((response) => {
-            return response.body;
+        const response = yield gauge.data().then((data) => {
+            return data.body;
         }).catch((error) => {
             throw error;
         });
