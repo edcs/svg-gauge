@@ -41,7 +41,7 @@ The test suite is built using Jest and Enzyme. To run the tests, use the followi
 If you'd like to build the static JS and HTML for this project you may run the following command:
 
 ```
-# nom run build
+# npm run build
 ```
 
 This will create the files needed to run the project in the directory named `build`.
