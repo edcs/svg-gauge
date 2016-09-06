@@ -33,7 +33,7 @@ This will start a WebPack development server and display the URL needed to acces
 The test suite is built using Jest and Enzyme. To run the tests, use the following command:
 
 ```
-# npm run dev
+# npm run test
 ```
 
 ## Building
