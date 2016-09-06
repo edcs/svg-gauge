@@ -50,11 +50,11 @@ This will create the files needed to run the project in the directory named `bui
 
 The following things in this project are incomplete:
 
- * *Automatic data re-refresh* Currently you need to reload the whole page to get a fresh set of data from the server,
+ * *Automatic data re-refresh:* Currently you need to reload the whole page to get a fresh set of data from the server,
    this could be updated so that data is automatically refreshed every few seconds/minutes.
- * *Data via Websockets* Currently the data is loaded via HTTP, a websocket server could be used to provide live 
+ * *Data via Websockets:* Currently the data is loaded via HTTP, a websocket server could be used to provide live 
    data updating.
- * *Edge Cases With Data* When certain values are sent, the needle can go off the dial, more extensive testing is
+ * *Edge Cases With Data:* When certain values are sent, the needle can go off the dial, more extensive testing is
    required to prevent this from happening.
- * *More extensive testing* This project uses Redux Sagas which aren't fully tested yet, tests should be written to
+ * *More extensive testing:* This project uses Redux Sagas which aren't fully tested yet, tests should be written to
    make sure that this part of the project works as expected.
